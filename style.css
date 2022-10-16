@@ -1,6 +1,15 @@
-
+.resetBtn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+#btn{
+    width: 100px;
+    height: 100px;
+}
 .mom{
     display: flex;
+    justify-content: center;
 }
 .childOne {
     display: grid;

@@ -1,13 +1,15 @@
-const gridSize = 7;
+let grid = 4; 
+
+const newGrid = document.querySelector('#btn') 
 
 const mom = document.querySelector('.mom'); 
 
 const cG = (grid) => {
-for(i=0;i<gridSize;i++) {
+for(i=0;i<grid;i++) {
 const child = document.createElement('div');
 child.classList.add('childOne');
 
-for(j=0;j<gridSize;j++){
+for(j=0;j<grid;j++){
     const child2 = document.createElement('div');
     child2.classList.add('childTwo');
     child.appendChild(child2)
@@ -19,6 +21,15 @@ mom.appendChild(child)
  
 }
 }
+newGrid.addEventListener('click', function(){
+    
+    const userGrid = Number(prompt('How many squares do you want?'))
 
-cG(gridSize);
+    while(userGrid > 100) {
+        userGrid = Number(prompt("Please enter a value of 100 or lower"))
+        
+    }
+    cG(userGrid);
+    })  
 
+cG(grid)

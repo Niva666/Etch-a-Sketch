@@ -23,7 +23,7 @@ mom.appendChild(child)
 }
 newGrid.addEventListener('click', function(){
     
-    const userGrid = Number(prompt('How many squares do you want?'))
+    let userGrid = Number(prompt('How many squares do you want?'))
 
     while(userGrid > 100) {
         userGrid = Number(prompt("Please enter a value of 100 or lower"))
